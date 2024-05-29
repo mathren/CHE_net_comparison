@@ -1,0 +1,44 @@
+&star_job
+
+! For single stars turn on rotation at ZAMS
+new_rotation_flag                    = .true.
+change_rotation_flag                 = .false.  ! rotation off until near zams
+new_omega_div_omega_crit             = 0.6d0
+near_zams_relax_omega_div_omega_crit = .true.
+num_steps_to_relax_rotation          = 20  ! use this many steps to change value
+relax_omega_max_yrs_dt               = 1d3 ! << MS lifetime
+
+change_D_omega_flag                  = .true.
+new_D_omega_flag                     = .true.
+
+pgstar_flag                          = .true.
+pause_before_terminate               = .false.
+
+! new_net_name                              = 'mesa_128.net' !"approx21_cr56.net" !  !
+
+
+/ ! end of star_job namelist
+
+&eos
+/ ! end of eos namelist
+
+
+&kap
+/ ! end of kap namelist
+
+
+&controls
+
+initial_mass                         = 40d0
+log_directory                        = 'LOGS1'
+write_header_frequency               = 10
+terminal_interval                    = 1
+
+! output
+max_num_profile_models               = 10000
+write_profiles_flag                  = .false.
+profile_interval                     = 100
+photo_interval                       = 100
+history_interval                     = 1
+
+/ ! end of controls namelist

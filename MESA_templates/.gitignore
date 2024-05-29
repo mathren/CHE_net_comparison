@@ -1,0 +1,7 @@
+# ignore MESA compiled files and output
+*.mod
+*.smod
+*.data
+*.a
+*.o
+*.index

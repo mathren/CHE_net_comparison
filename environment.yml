@@ -1,0 +1,9 @@
+name: nets_CC
+channels:
+  - defaults
+dependencies:
+  - pip=23.3
+  - numpy=1.26.0
+  - matplotlib=3.7.3
+  - pip:
+    - git+https://github.com/mathren/compare_workdir_MESA/

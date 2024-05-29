@@ -1,0 +1,32 @@
+#+title: Small nuclear reaction network are not sufficient for the initial conditions of core collapse
+#+BEGIN_html
+<p align="center">
+<a href="https://github.com/mathren/nets_CCSN/blob/main/manuscript/CHE_networks.pdf">
+<img src="https://img.shields.io/badge/article-pdf-blue.svg?style=flat" alt="Read the article"/>
+</a>
+<a href=""><img src="https://zenodo.org/badge/DOI/10.5281/zenodo.11375523.svg" alt="DOI"></a>
+</p>
+#+END_html
+
+*WARNING*: This repository contains in =MESA_results/= output of
+simulations with file sizes exceeding 100Mb and managed with =git lfs=.
+These are also backed on [[https://doi.org/10.5281/zenodo.11375523][zenodo]].
+
+** Main take home point
+
+If you need progenitors to study multi-D neutrino hydrodynamics of
+stellar explosions, whether including rotation or not, do not waste
+your precious CPUh/GPUh on progenitors computed with =approx= nuclear
+reaction networks.
+
+These are great for many things, but not to calculate the weak
+reactions that determine the fraction of free electrons in the core.
+They introduce a *known* systematic uncertainty comparable to unknown in
+many other physical ingredients, and thus muddy the waters and prevent
+learning robust conclusion from the explosion of progenitors computed
+with these.
+
+** TODO list
+
+ - [ ] check resolution tests more thoroughly
+ - [ ] upload final results on zendodo [[doi.org/10.5281/zenodo.11375523]]

@@ -1,0 +1,9 @@
+#!/bin/bash
+
+{
+    rm -f restart_photo
+
+    date "+DATE: %Y-%m-%d%nTIME: %H:%M:%S"
+    ./star
+    date "+DATE: %Y-%m-%d%nTIME: %H:%M:%S"
+} 2>&1 | tee output.txt ;
