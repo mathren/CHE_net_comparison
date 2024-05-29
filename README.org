@@ -4,7 +4,7 @@
 <a href="https://github.com/mathren/small_net_progenitors/blob/master/manuscript/CHE_networks.pdf">
 <img src="https://img.shields.io/badge/article-pdf-blue.svg?style=flat" alt="Read the article"/>
 </a>
-<a href=""><img src="https://zenodo.org/badge/DOI/10.5281/zenodo.11375523.svg" alt="DOI"></a>
+<a href="https://doi.org/10.5281/zenodo.11375523"><img src="https://zenodo.org/badge/DOI/10.5281/zenodo.11375523.svg" alt="DOI"></a>
 </p>
 #+END_html
 
@@ -24,4 +24,12 @@ with these.
 
 ** How to reproduce
 
-From zenodo download [][MESA_output]
+From [[https://doi.org/10.5281/zenodo.11375523][zenodo]] download the MESA results, stored in
+=40_rot0.6_large_net.xz= for the 128-isotope model run with =mesa_128.net=
+and =40_rot0.6_small_net.tar.xz= for the 22-isotope
+(=approx21_plus_cr56.net=) model. Download also =scripts.tar.xz= from
+zenodo and unpack all in the same folder (or use the =scripts/= folder
+here).
+
+Run =compare_two_models.py= to produce the figure in the research note.
+It depends on functions defined in the other =*.py= files in =scripts/=.
