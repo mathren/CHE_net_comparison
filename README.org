@@ -24,15 +24,26 @@ with these.
 
 ** How to reproduce
 
+*** Chemically homogeneous stellar models with varying nuclear reaction networks
+
+We computed the stellar models with [[https://docs.mesastar.org/en/latest/][MESA]] (version r24.03.1). The
+folder =MESA_templates/= contains template work directories, you just
+need to edit =new_net_name= to pick the nuclear reaction network of
+choice and run the models. The exact template used for the submitted
+manuscript is also available on [[https://zenodo.org/records/11375523/files/MESA_templates.tar.xz][zenodo]], the folder here may evolve
+later on.
+
+*** Figure
+
 From [[https://doi.org/10.5281/zenodo.11375523][zenodo]] download the MESA results, stored in
 =40_rot0.6_large_net.xz= for the 128-isotope model run with =mesa_128.net=
 and =40_rot0.6_small_net.tar.xz= for the 22-isotope
-(=approx21_plus_cr56.net=) model. These were computed with [[https://docs.mesastar.org/en/latest/][MESA]] version
-r24.03.1.
+(=approx21_plus_cr56.net=) model.
 
-Download also =scripts.tar.xz= from
-zenodo and unpack all in the same folder (or use the =scripts/= folder
-here).
+Download also =scripts.tar.xz= from zenodo and unpack all in the same
+folder (or use the =scripts/= folder here).
 
 Run =compare_two_models.py= to produce the figure in the research note.
 It depends on functions defined in the other =*.py= files in =scripts/=.
+The figure in the manuscript was made with python =3.11.9= and the
+environment provided in =scripts/=.
