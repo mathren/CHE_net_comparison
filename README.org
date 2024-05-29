@@ -27,7 +27,10 @@ with these.
 From [[https://doi.org/10.5281/zenodo.11375523][zenodo]] download the MESA results, stored in
 =40_rot0.6_large_net.xz= for the 128-isotope model run with =mesa_128.net=
 and =40_rot0.6_small_net.tar.xz= for the 22-isotope
-(=approx21_plus_cr56.net=) model. Download also =scripts.tar.xz= from
+(=approx21_plus_cr56.net=) model. These were computed with [[https://docs.mesastar.org/en/latest/][MESA]] version
+r24.03.1.
+
+Download also =scripts.tar.xz= from
 zenodo and unpack all in the same folder (or use the =scripts/= folder
 here).
 
