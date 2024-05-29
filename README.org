@@ -26,3 +26,4 @@ with these.
 
  - [ ] check resolution tests more thoroughly
  - [ ] upload final results on zendodo [[doi.org/10.5281/zenodo.11375523]]
+ - [ ] update zip files on zenodo
