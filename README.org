@@ -22,8 +22,6 @@ many other physical ingredients, and thus muddy the waters and prevent
 learning robust conclusion from the explosion of progenitors computed
 with these.
 
-** TODO list
+** How to reproduce
 
- - [ ] check resolution tests more thoroughly
- - [ ] upload final results on zendodo [[doi.org/10.5281/zenodo.11375523]]
- - [ ] update zip files on zenodo
+From zenodo download [][MESA_output]
