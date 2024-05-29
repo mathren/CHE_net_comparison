@@ -180,5 +180,4 @@ if __name__ == "__main__":
     large = root + '40_rot0.6_large_net/'
     LOGS_large = large + 'LOGS1/'
     fig_name = root + "../manuscript/figures/comparison.pdf"
-    compare_two_models(LOGS_small, LOGS_large,
-                       fig_name=fig_name)
+    compare_two_models(LOGS_small, LOGS_large, fig_name=fig_name)

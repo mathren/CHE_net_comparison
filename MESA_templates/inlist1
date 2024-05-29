@@ -41,4 +41,10 @@ profile_interval                     = 100
 photo_interval                       = 100
 history_interval                     = 1
 
+! rest tests
+! mesh_delta_coeff = 0.75d0
+! mesh_delta_coeff_for_highT = 0.75d0 !1.5d0 !3.0d0
+! time_delta_coeff = 0.75d0
+! min_timestep_limit = 1d-21
+
 / ! end of controls namelist
