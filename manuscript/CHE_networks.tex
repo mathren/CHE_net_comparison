@@ -44,7 +44,6 @@
   core collapse, bounce, (jet formation), and explosion.
 \end{abstract}
 
-% \section{Introduction}
 \section{Modeling uncertainties compound}
 
 Massive stars ($\gtrsim 7-10\,M_\odot$, \citealt{doherty:15,
@@ -61,8 +60,7 @@ determined by the late core evolution. Only limited sets of
 nonrotating progenitors computed sufficiently late exhist
 \citep{woosley:02, sukhbold:16, farmer:16, renzo:17, wang:24} and even
 fewer include rotation \citep{heger:00,
-  aguilera-dena:18}. % , making conclusions
-% suseptible to systematic uncertainties.
+  aguilera-dena:18}.
 
 \cite{farmer:16} showed the impact of algorithmic choices on the final
 core of nonrotating stars, demonstrating that small
@@ -78,36 +76,30 @@ networks \citep{timmes:00}. Here, we extend this result to fast
 rotating progenitors.
 
 We ran two $40\,M_\odot$, Z=0.001 stars initially rotating at 60\% of
-breakup with MESA \citep[][r24.03.1]{paxton:13, %paxton:11, paxton:15,
-  % paxton:18, paxton:19,
-  jermyn:23}. A reproducibility package is
-available at
+breakup with MESA \citep[][r24.03.1]{jermyn:23}. A reproducibility
+package is available at
 \href{https://doi.org/10.5281/zenodo.11375523}{doi:10.5281/zenodo.11375523}.
 The models differ only in the NRN, \texttt{mesa\_128} (orange in
 \Figref{fig:comparison}), sufficient to follow the deleptonization
 \citep{farmer:16}, and \texttt{approx21\_plus\_cr56} (blue). We
 include rotational mixing \citep{heger:00}, magnetic torques
-\citep{spruit:02}, and %We include % a lagrangian treatment of
-hydrodynamics. We expunge spurious velocities in layers not in sonic
-contact with the innermost core (CO, Si, or Fe). We performed
-resolution tests (up to mesh sizes $\gtrsim 10\,000$), and found that
-numerical resolution affects convection in the inner $5\,M_\odot$ and
-consequently the inner structure \citep[e.g.,][]{sukhbold:14,
-  schneider:23}. This emphasizes the importance of resolution tests
-\citep{farmer:16}. The models we present have identical
-resolution requirements and are representative of the range of
-structures that can be obtained.
+\citep{spruit:02}, and hydrodynamics. We expunge spurious velocities
+in layers not in sonic contact with the innermost core (CO, Si, or
+Fe). We performed resolution tests (up to mesh sizes
+$\gtrsim 10\,000$), and found that numerical resolution affects
+convection in the inner $5\,M_\odot$ and consequently the inner
+structure \citep[e.g.,][]{sukhbold:14, schneider:23}. This emphasizes
+the importance of resolution tests \citep{farmer:16, farag:22}. The models we
+present have identical resolution requirements and are representative
+of the range of structures that can be obtained.
 
 \begin{figure*}[htbp]
   \centering
-  \includegraphics[width=\textwidth]{comparison}
+  \includegraphics[width=0.9\textwidth]{comparison}
   \caption{Comparison of chemically homogeneous models at the onset of
     core-collapse. Right: HRD (one dot every $10^5$ years).
     Top left: density. Middle left: $Y_e$, relative difference in red
     (right vertical axis). Bottom left: specific angular momentum $j$.
-    % The shade covers the range between the innermost stable orbit
-    % $j_\mathrm{ISCO}$ for $a=0-1$, with $a$ \citealt{kerr:63}
-    % parameter.
     The dashed line shows $j_\mathrm{ISCO}$ assuming the
     accretion of the enclosed $m$ and $j$. Dots correspond to regions
     that collapse forming a disk, $j\geq j_\mathrm{ISCO}$.}
@@ -117,17 +109,14 @@ structures that can be obtained.
 Both models experience blueward rotationally-induced chemically
 homogeneous evolution \citep[e.g.,][]{maeder:00} and are computed
 until the infall velocity exceeds $300\,\mathrm{km\
-  s^{-1}}$. % By this
-% point the angular momentum transport processes are effectively frozen
-% throughtout the star.
+  s^{-1}}$.
 \Figref{fig:comparison} (right) shows the Hertzsprung-Russell diagram
 (HRD). The two tracks are observationally indistinguishable, with most
 differences confined to fast evolutionary phases: small NRNs are
 sufficient to simulate surface properties.
 
-Nevertheless, the interior structure % of the two models are
-significantly different: %  the iron core mass of the small (large) NRN
-% model is 1.9 (2.2)$\,M_\odot$ and
+Nevertheless, the interior structure
+significantly different:
 the compactness parameter \citep{oconnor:11} of the small (large) NRN
 model is $\xi_{2.5}=0.376$ ($0.262$). The $\sim{}44\%$ variation in
 $\xi_{2.5}$ is comparable to uncertainties introduced by numerical
@@ -135,11 +124,7 @@ resolution \citep{farmer:16}, mass loss \citep{renzo:17}, and
 overshooting \citep{davis:19}. No single parameter is
 sufficient to characterize ``explodability''
 \citep[e.g.,][]{ertl:16, vartanyan:21}, and we show on the left
-of \Figref{fig:comparison} the internal profiles.%  of the
-% stars. % , using the
-% local free fall timescale $\tau_\mathrm{free\ fall}=2\pi\sqrt{r^3/Gm}$
-% as horizontal axis, with $r$ radius, $m$ enclosed mass, and $G$ gravitational
-% constant.
+of \Figref{fig:comparison} the internal profiles.
 
 The top panel shows the density profiles, with an inset focusing on
 the region where the success or failure of an explosion is decided
@@ -151,7 +136,7 @@ variations
 $\Delta=(Y_e^\mathrm{small\ NRN}-Y_e^\mathrm{large\
   NRN})/Y_e^\mathrm{large\ NRN}\simeq 1-3\%$ (red, righ vertical
 axis). The range of $Y_e$ found at the onset of collapse is $0.4-0.5$,
-making this nonnegligible. % Moving outwards $\Delta$ decreases.
+making this nonnegligible.
 
 The bottom left panel shows the specific angular momentum ($j$, solid
 lines) and the innermost stable orbit angular momentum assuming
@@ -163,18 +148,15 @@ directly collapse, and we expect a proto-neutron-star phase. After the
 collapse of this material, the 128-isotope model shows the formation
 of a disk immediately, while the 22-isotope model only after
 $\gtrsim 1\,\mathrm{s}$. From disk formation onwards the evolution
-will diverge because of feedback processes (disk wind, jet, etc.,
+will diverge because of feedback processes (disk wind, jet,
 \citealt{gottlieb:22}). This difference occurs because of the
 diverging evolution of the density and thus $j$ caused by the
 treatment of nuclear physics.
 
-% \section{Avoid small-network progenitor for multidimensional
-%   simulations}
-
 Core collapse is a $\sim{}1\%$ problem: only this fraction of the
-gravitational potential released % by the collapse %of the core
-needs to be ``harvested'' % in the explosion
-to produce a successful supernova. Predictive % core-collapse
+gravitational potential released
+needs to be ``harvested''
+to produce a successful supernova. Predictive
 simulations require high accuracy initial conditions. Many uncertain
 processes occur in massive stars \citep[e.g.,][]{woosley:02,
   langer:12}, and modeling choices matter, including resolution
@@ -187,14 +169,8 @@ conditions that are known to not include enough physics to address the
 questions motivating such simulations in the first place. This means
 not using models computed only until carbon depletion, models wiht
 small NRN, and/or underresolved
-models. % for which the core structure and overall chemical and
-% binding energy profile of the star are unreliable.
+models.
 
-% We have extended the results of \cite{farmer:16} to fast rotating
-% stellar progenitors.
-% The use of small nuclear reaction network
-% predetermines the core $Y_e$, thus its effective Chandrasekhar mass
-% and inner density profile (and not only the innermost central value).
 At fixed angular momentum transport, small NRN result in significantly
 different rotationally-powered explosions for the same core-collapse
 physics, making robust conclusions impossible.
@@ -204,10 +180,6 @@ outer layers of stars up to collapse, and possibly to make relative
 statements, but require care to marginalize any conclusion against
 this large systematic modeling uncertainty in the progenitor.
 
-
-% \section*{Acknowledgements}
-
-% \newpage
 \bibliography{./CHE_networks.bib}
 \end{document}
 
