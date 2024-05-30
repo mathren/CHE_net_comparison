@@ -13,8 +13,8 @@
 \begin{document}
 
 % Title
-\title{Progenitor stars calculated with small reaction networks
-  should not be used as initial conditions for core collapse}
+\title{Progenitor with small reaction networks should not be used as
+  initial conditions for core collapse}
 
 \author[0000-0002-6718-9472]{M.~Renzo}
 \affiliation{University of Arizona, Department of Astronomy \& Steward Observatory, 933 N.~Cherry Ave., Tucson, AZ 85721, USA}
@@ -44,66 +44,65 @@
   core collapse, bounce, (jet formation), and explosion.
 \end{abstract}
 
-\section{Introduction}
+% \section{Introduction}
+\section{Modeling uncertainties compound}
 
 Massive stars ($\gtrsim 7-10\,M_\odot$, \citealt{doherty:15,
   poelarends:17}) end their life collapsing and possibly exploding
 \citep[e.g.,][]{janka:12, burrows:21, soker:24}. Although a consensus
 around the ``neutrino-driven'' paradigm is establishing
-\citep[e.g.,][]{wang:23, nakamura:24}, the details remain debated
-\citep[e.g.,][]{shishkin:22, soker:22}, especially in terms of magnetic
+\citep[e.g.,][]{wang:23, nakamura:24}, details remain debated
+\citep[e.g.,][]{shishkin:22, soker:22}, especially for magnetic
 fields and rotation \citep[e.g.,][]{symbalisty:84, mosta:15, aloy:21}.
 
-The collapse and possible explosion is sensitive to the initial
-conditions \citep[e.g.,][]{ott:18, kuroda:18, burrows:23,
-  nakamura:24}, determined by poorly understood late core evolution of
-the progenitor stars. Only limited sets of non-rotating progenitors
-computed sufficiently late are available \citep{woosley:02,
-  sukhbold:16, farmer:16, renzo:17, wang:24} and even fewer rotating
-progenitors \citep{heger:00, aguilera-dena:18}. % , making conclusions
+The collapse/explosion is sensitive to the initial conditions
+\citep[e.g.,][]{ott:18, kuroda:18, burrows:23, nakamura:24},
+determined by the late core evolution. Only limited sets of
+nonrotating progenitors computed sufficiently late exhist
+\citep{woosley:02, sukhbold:16, farmer:16, renzo:17, wang:24} and even
+fewer include rotation \citep{heger:00,
+  aguilera-dena:18}. % , making conclusions
 % suseptible to systematic uncertainties.
 
 \cite{farmer:16} showed the impact of algorithmic choices on the final
-core-structure of non-rotating stars, and demonstrated that small
-($\sim{}20$-isotope) nuclear reaction network (NRN) are insufficient
-to produce reliable progenitors for multidimensional core collapse
-studies. These NRNs allow for deleptonization through one single
-compound reaction (e.g, $^{56}\mathrm{Fe}+2e^{-}$ $\rightarrow$
-$^{56}\mathrm{Cr}+2\nu_{e}$). This predetermines the $Y_e$ profile
-\emph{throughout} the core, thus the effective \cite{chandrasekhar:31}
-mass $\propto {Y_e}^2$, and ultimately the outcome of the collapse.
-This affects stellar evolution models computed with the
-\texttt{approx} family of nuclear reaction networks \citep{timmes:00}.
-Here, we extend this result to fast rotating progenitors.
+core of nonrotating stars, demonstrating that small
+($\sim{}20$-isotope) NRN are insufficient to produce reliable initial
+conditions for multidimensional core collapse studies. These NRNs
+allow for deleptonization through one single compound reaction (e.g,
+$^{56}\mathrm{Fe}+2e^{-}$ $\rightarrow$ $^{56}\mathrm{Cr}+2\nu_{e}$).
+This predetermines $Y_e$ \emph{throughout} the core, thus
+the effective \cite{chandrasekhar:31} mass $\propto {Y_e}^2$, and
+ultimately the outcome of the collapse. This affects stellar evolution
+models computed with the \texttt{approx} family of nuclear reaction
+networks \citep{timmes:00}. Here, we extend this result to fast
+rotating progenitors.
 
-\section{Modeling uncertainties compound}
-
-We ran two $40\,M_\odot$ low-metallicity (Z=0.001) stars initially
-rotating at 60\% of breakup with MESA \citep[][version
-r24.03.1]{paxton:11, paxton:13, paxton:15, paxton:18, paxton:19,
-  jermyn:23}. Files to reproduce these two models are available at
+We ran two $40\,M_\odot$, Z=0.001 stars initially rotating at 60\% of
+breakup with MESA \citep[][r24.03.1]{paxton:13, %paxton:11, paxton:15,
+  % paxton:18, paxton:19,
+  jermyn:23}. A reproducibility package is
+available at
 \href{https://doi.org/10.5281/zenodo.11375523}{doi:10.5281/zenodo.11375523}.
-They differ only in the NRN adopted, \texttt{mesa\_128} (orange in
+The models differ only in the NRN, \texttt{mesa\_128} (orange in
 \Figref{fig:comparison}), sufficient to follow the deleptonization
 \citep{farmer:16}, and \texttt{approx21\_plus\_cr56} (blue). We
 include rotational mixing \citep{heger:00}, magnetic torques
 \citep{spruit:02}, and %We include % a lagrangian treatment of
 hydrodynamics. We expunge spurious velocities in layers not in sonic
-contact with the innermost core (CO, Si, or Fe). We carried out
-resolution tests (increasing the mesh size up to $\gtrsim 10\,000$),
-and found that, for both NRNs, numerical resolution affects convection
-in the inner $5\,M_\odot$ and consequently the inner structure
-\citep[e.g.,][]{sukhbold:14, schneider:23}. This emphasizes the
-importance of checking the numerical resolution \citep{farmer:16,
-  farag:22}. The models we present have identical resolution
-requirements and are representative of the range of structures that
-can be obtained.
+contact with the innermost core (CO, Si, or Fe). We performed
+resolution tests (up to mesh sizes $\gtrsim 10\,000$), and found that
+numerical resolution affects convection in the inner $5\,M_\odot$ and
+consequently the inner structure \citep[e.g.,][]{sukhbold:14,
+  schneider:23}. This emphasizes the importance of resolution tests
+\citep{farmer:16}. The models we present have identical
+resolution requirements and are representative of the range of
+structures that can be obtained.
 
 \begin{figure*}[htbp]
   \centering
   \includegraphics[width=\textwidth]{comparison}
   \caption{Comparison of chemically homogeneous models at the onset of
-    core-collapse. Right: HRD (dots mark intervals of $10^5$ years).
+    core-collapse. Right: HRD (one dot every $10^5$ years).
     Top left: density. Middle left: $Y_e$, relative difference in red
     (right vertical axis). Bottom left: specific angular momentum $j$.
     % The shade covers the range between the innermost stable orbit
@@ -124,21 +123,20 @@ until the infall velocity exceeds $300\,\mathrm{km\
 \Figref{fig:comparison} (right) shows the Hertzsprung-Russell diagram
 (HRD). The two tracks are observationally indistinguishable, with most
 differences confined to fast evolutionary phases: small NRNs are
-sufficient to simulate surface properties of
-stars. % throughout their evolution.
+sufficient to simulate surface properties.
 
-Nevertheless, the interior structure of the two models are
+Nevertheless, the interior structure % of the two models are
 significantly different: %  the iron core mass of the small (large) NRN
 % model is 1.9 (2.2)$\,M_\odot$ and
 the compactness parameter \citep{oconnor:11} of the small (large) NRN
 model is $\xi_{2.5}=0.376$ ($0.262$). The $\sim{}44\%$ variation in
 $\xi_{2.5}$ is comparable to uncertainties introduced by numerical
-resolution \citep{farmer:16}, mass-loss rates \citep{renzo:17}, and
-convective boundary mixing \citep{davis:19}. No single parameter is
-sufficient to characterize the ``explodability''
-\citep[e.g.,][]{ertl:16, vartanyan:21}, and we show in the left panels
-of \Figref{fig:comparison} the internal structure of the
-stars. % , using the
+resolution \citep{farmer:16}, mass loss \citep{renzo:17}, and
+overshooting \citep{davis:19}. No single parameter is
+sufficient to characterize ``explodability''
+\citep[e.g.,][]{ertl:16, vartanyan:21}, and we show on the left
+of \Figref{fig:comparison} the internal profiles.%  of the
+% stars. % , using the
 % local free fall timescale $\tau_\mathrm{free\ fall}=2\pi\sqrt{r^3/Gm}$
 % as horizontal axis, with $r$ radius, $m$ enclosed mass, and $G$ gravitational
 % constant.
@@ -148,38 +146,35 @@ the region where the success or failure of an explosion is decided
 \citep[e.g.,][]{ertl:16, boccioli:23, burrows:23}.
 
 The middle panel shows the $Y_e$ profile. All the mass collapsing
-interior to $10^9\,\mathrm{cm}$ shows \emph{structured} variations of
-$\sim{}1-3\%$ shown in red on the righ vertical axis as
-$\Delta=(Y_e(\mathrm{small\ NRN})-Y_e(\mathrm{large\
-  NRN}))/Y_e(\mathrm{large\ NRN})$. The range of $Y_e$ found in a
-collapsing core is $0.4-0.5$, and $\sim1-3\%$ variations are not
-negligible. Moving outwards, where weak reactions are unimportant,
-$\Delta$ decreases.
+interior to $10^9\,\mathrm{cm}$ shows \emph{structured} relative
+variations
+$\Delta=(Y_e^\mathrm{small\ NRN}-Y_e^\mathrm{large\
+  NRN})/Y_e^\mathrm{large\ NRN}\simeq 1-3\%$ (red, righ vertical
+axis). The range of $Y_e$ found at the onset of collapse is $0.4-0.5$,
+making this nonnegligible. % Moving outwards $\Delta$ decreases.
 
-The bottom left panel shows the specific angular momentum profile
-($j$, solid lines) and the innermost stable orbit angular momentum
-assuming the mass and specific angular momentum inside the abscissa
-for the compact object ($j_\mathrm{ISCO}$, dashed lines,
-\citealt{bardeen:72}). Whenever $j\geq j_\mathrm{ISCO}$ we expect the
-formation of an accretion disk (thicker lines). In both cases the
-inner $\sim{}10^{7}\,\mathrm{cm}$ retain too much angular momentum to
+The bottom left panel shows the specific angular momentum ($j$, solid
+lines) and the innermost stable orbit angular momentum assuming
+accretion of the enclosed mass and $j$ ($j_\mathrm{ISCO}$, dashed
+lines, \citealt{bardeen:72}). Wherever $j\geq j_\mathrm{ISCO}$ an
+accretion disk has to form (thicker dots). In both cases the inner
+$\sim{}10^{7}\,\mathrm{cm}$ retain too much angular momentum to
 directly collapse, and we expect a proto-neutron-star phase. After the
 collapse of this material, the 128-isotope model shows the formation
 of a disk immediately, while the 22-isotope model only after
 $\gtrsim 1\,\mathrm{s}$. From disk formation onwards the evolution
 will diverge because of feedback processes (disk wind, jet, etc.,
 \citealt{gottlieb:22}). This difference occurs because of the
-different evolution of the density and consequently the angular
-momentum caused by the different treatment of nuclear physics.
+diverging evolution of the density and thus $j$ caused by the
+treatment of nuclear physics.
 
-\section{Avoid small-network progenitor for multidimensional
-  simulations}
+% \section{Avoid small-network progenitor for multidimensional
+%   simulations}
 
 Core collapse is a $\sim{}1\%$ problem: only this fraction of the
 gravitational potential released % by the collapse %of the core
 needs to be ``harvested'' % in the explosion
-to produce a successful supernova. Therefore,
-predictive % core-collapse
+to produce a successful supernova. Predictive % core-collapse
 simulations require high accuracy initial conditions. Many uncertain
 processes occur in massive stars \citep[e.g.,][]{woosley:02,
   langer:12}, and modeling choices matter, including resolution
