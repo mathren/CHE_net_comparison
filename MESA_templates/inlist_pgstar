@@ -1,15 +1,17 @@
 &pgstar
 
-pgstar_interval                           = 50
+pgstar_interval                           = 5
 ! pgplot on screen
 Grid2_win_flag                            = .false.
 Profile_Panels1_win_flag                  = .false.
 Profile_Panels3_win_flag                  = .false.
+Profile_Panels4_win_flag                  = .true.
 Profile_Panels5_win_flag                  = .false.
 ! saved plots
 Grid2_file_flag                           = .true.
 Profile_Panels1_file_flag                 = .false.
 Profile_Panels3_file_flag                 = .false.
+Profile_Panels4_file_flag                 = .true.
 Profile_Panels5_file_flag                 = .false.
 ! interval for files
 Grid2_file_interval                       = 100 ! output when mod(model_number,Grid2_file_interval)==0
@@ -276,6 +278,55 @@ Profile_Panels5_other_ycenter(1)          = -101d0
 Profile_Panels5_other_ymargin(1)          = 0.1
 Profile_Panels5_other_dymin(1)            = -1
 Profile_Panels5_show_grid                 = .true.
+
+! movie for Thomas Janka
+
+! **Window sizing**
+! ::
+
+Profile_Panels4_win_width = 10
+Profile_Panels4_win_aspect_ratio = 0.75
+
+! ::
+
+Profile_Panels4_win_aspect_ratio = 1.25
+Profile_Panels4_txt_scale = 0.9
+Profile_Panels4_ybot = 0.1
+Profile_Panels4_ytop = 0.9
+Profile_Panels4_title = 'approx21_plus_cr56'
+
+! ::
+
+Profile_Panels4_xaxis_name = 'logR_cm'
+Profile_Panels4_xaxis_reversed = .false.
+
+! ::
+
+Profile_Panels4_num_panels = 5
+Profile_Panels4_yaxis_name(1) = 'Abundance'
+Profile_Panels4_yaxis_name(2) = 'Power'
+Profile_Panels4_yaxis_name(3) = 'Mixing'
+Profile_Panels4_yaxis_name(5) = 'Dynamo'
+
+Profile_Panels4_yaxis_name(3) = 'ye'
+Profile_Panels4_ymin(3) = 0.4d0
+Profile_Panels4_ymax(3) =  0.51d0
+
+Profile_Panels4_other_yaxis_name(3) = 'logT'
+Profile_Panels4_other_ymin(3) = 4d0
+Profile_Panels4_other_ymax(3) = 10d0
+
+Profile_Panels4_yaxis_name(4) = 'entropy'
+Profile_Panels4_ymin(4) = -0.050
+Profile_Panels4_ymax(4) =  20d0
+
+Profile_Panels4_other_yaxis_name(4) = 'logRho'
+Profile_Panels4_other_ymin(4) = -5d0
+Profile_Panels4_other_ymax(4) = 10d0
+
+Profile_Panels4_file_prefix = 'movie_approx21_plus_cr56_'
+Profile_Panels4_file_interval = 1
+
 
 
 /
