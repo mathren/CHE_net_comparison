@@ -8,6 +8,8 @@
 </p>
 #+END_html
 
+Published as [[https://ui.adsabs.harvard.edu/abs/2024RNAAS...8..152R/abstract][2024RNAAS...8..152R]].
+
 ** Main take home point
 
 If you need progenitors to study multi-dimensional neutrino
